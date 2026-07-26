@@ -275,7 +275,18 @@
 
   /* Icon rotation on hover */
   svg{
+    display:block;
     transition: transform 0.4s cubic-bezier(.22,1,.36,1), filter 0.3s;
+  }
+  .contact-icon svg{
+    width:2.25rem;
+    height:2.25rem;
+    flex:none;
+    overflow:visible;
+    color:var(--mauve-deep);
+  }
+  .contact-icon path{
+    vector-effect: non-scaling-stroke;
   }
   a:hover svg{
     transform: rotate(5deg) scale(1.1);
@@ -330,7 +341,7 @@
     <!-- Logos + stitch signature -->
     <div class="reveal in flex items-center justify-center gap-6 sm:gap-12 mb-10">
       <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-transparent shadow-luxe-lg flex items-center justify-center p-0 border-0">
-        <img src="wedding-snapp-logo.jpeg" alt="Wedding Snapp logo" class="w-full h-full object-cover rounded-full" />
+        <img src="image/wedding-snapp-logo.jpeg" alt="Wedding Snapp logo" class="w-full h-full object-cover rounded-full" />
       </div>
 
       <!-- signature stitch element connecting the two brands -->
@@ -339,7 +350,7 @@
       </svg>
 
       <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full shadow-luxe-lg flex items-center justify-center p-0 border-0" style="background:transparent;">
-        <img src="sociall-snap-logo.png" alt="Sociall Snap logo" class="w-full h-full object-contain rounded-full" />
+        <img src="image/sociall-snap-logo.png" alt="Sociall Snap logo" class="w-full h-full object-contain rounded-full" />
       </div>
     </div>
 
@@ -403,7 +414,7 @@
       <div class="reveal lift glass rounded-3xl p-8 sm:p-10 shadow-luxe">
         <div class="flex items-center gap-4 mb-8">
           <div class="w-14 h-14 rounded-full overflow-hidden border-0 shrink-0">
-            <img src="wedding-snapp-logo.jpeg" alt="Wedding Snapp" class="w-full h-full object-cover" />
+            <img src="image/wedding-snapp-logo.jpeg" alt="Wedding Snapp" class="w-full h-full object-cover" />
           </div>
           <div>
             <h3 class="font-display text-2xl font-medium text-ink">Wedding Snapp</h3>
@@ -447,7 +458,7 @@
       <div class="reveal lift glass rounded-3xl p-8 sm:p-10 shadow-luxe" style="transition-delay:.1s;">
         <div class="flex items-center gap-4 mb-8">
           <div class="w-14 h-14 rounded-full overflow-hidden shrink-0" style="background:transparent;">
-            <img src="sociall-snap-logo.png" alt="Sociall Snap" class="w-full h-full object-contain" />
+            <img src="image/sociall-snap-logo.png" alt="Sociall Snap" class="w-full h-full object-contain" />
           </div>
           <div>
             <h3 class="font-display text-2xl font-medium text-ink">Sociall Snap</h3>
@@ -517,8 +528,10 @@
       </div> -->
 
       <div class="reveal lift glass rounded-3xl p-7 text-center shadow-luxe" style="transition-delay:.08s;">
-        <div class="w-16 h-16 mx-auto rounded-full bg-mauve/15 flex items-center justify-center mb-4">
-          <span class="font-display text-2xl text-mauve-deep">🕻</span>
+        <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-mauve/15 flex items-center justify-center mb-4">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2.62a2.46 2.46 0 0 1-2.68 2.46A19.38 19.38 0 0 1 2 4.68 2.46 2.46 0 0 1 4.46 2h2.62a1.6 1.6 0 0 1 1.56 1.23l.6 2.6a1.6 1.6 0 0 1-.46 1.54L7.52 8.63a15.3 15.3 0 0 0 7.85 7.85l1.26-1.26a1.6 1.6 0 0 1 1.54-.46l2.6.6A1.6 1.6 0 0 1 22 16.92z"/>
+          </svg>
         </div>
         <!-- <h3 class="font-display text-xl font-medium mb-1">Prisha</h3> -->
         <p class="text-ink/60 text-sm mb-5">+91 93131 38277</p>
@@ -529,8 +542,10 @@
       </div>
 
       <div class="reveal lift glass rounded-3xl p-7 text-center shadow-luxe" style="transition-delay:.16s;">
-        <div class="w-16 h-16 mx-auto rounded-full bg-mauve/15 flex items-center justify-center mb-4">
-          <span class="font-display text-2xl text-mauve-deep">🕻</span>
+        <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-mauve/15 flex items-center justify-center mb-4">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2.62a2.46 2.46 0 0 1-2.68 2.46A19.38 19.38 0 0 1 2 4.68 2.46 2.46 0 0 1 4.46 2h2.62a1.6 1.6 0 0 1 1.56 1.23l.6 2.6a1.6 1.6 0 0 1-.46 1.54L7.52 8.63a15.3 15.3 0 0 0 7.85 7.85l1.26-1.26a1.6 1.6 0 0 1 1.54-.46l2.6.6A1.6 1.6 0 0 1 22 16.92z"/>
+          </svg>
         </div>
         <!-- <h3 class="font-display text-xl font-medium mb-1">Aryan</h3> -->
         <p class="text-ink/60 text-sm mb-5">+91 94261 81394</p>
@@ -641,7 +656,7 @@
       'TEL;TYPE=CELL,VOICE:+919426181394',
       'EMAIL;TYPE=INTERNET:weddingsnapp.in@gmail.com',
       'EMAIL;TYPE=INTERNET:sociallsnap@gmail.com',
-      'URL:https://yourwebsite.com',
+      'URL:',
       'ADR;TYPE=WORK:;;Ahmedabad;Gujarat;;India',
       'NOTE:Wedding Content Creation & Social Media Management — Ahmedabad, Gujarat, India',
       'END:VCARD'
