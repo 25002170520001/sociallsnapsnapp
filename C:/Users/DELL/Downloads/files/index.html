@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+<title>Wedding Snapp × Sociall Snap | Ahmedabad</title>
+<meta name="description" content="Wedding Snapp — cinematic wedding content creation. Sociall Snap — social media management & growth. Based in Ahmedabad, Gujarat." />
+
+<!-- ================================================================
+     CUSTOMIZATION GUIDE (read me first)
+     - Brand colors / fonts:  <style> block, :root variables
+     - Portfolio images:      search "PORTFOLIO IMAGES" below
+     - Contact people:        search "CONTACT CARDS"
+     - Emails / Instagram / Websites: search "LINKS SECTION"
+     - vCard content:         search "VCARD DATA" in the <script>
+     ================================================================ -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Poppins:wght@300;400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    theme: {
+      extend: {
+        colors: {
+          cream: '#0f0f0f',
+          creamdeep: '#1a1a1a',
+          mauve: '#D4A5A5',
+          mauvedeep: '#B88888',
+          mauvelight: '#E5C4C4',
+          navy: '#4A7FD8',
+          ink: '#f0f0f0',
+        },
+        fontFamily: {
+          display: ['"Cormorant Garamond"', 'serif'],
+          script: ['"Great Vibes"', 'cursive'],
+          body: ['"Poppins"', 'sans-serif'],
+        },
+      }
+    }
+  }
+</script>
+
+<style>
+  :root{
+    --mauve:#D4A5A5;
+    --mauve-deep:#B88888;
+    --navy:#4A7FD8;
+    --cream:#0f0f0f;
+    --page-gutter: clamp(1rem, 2.6vw, 2rem);
+    --section-space: clamp(4.5rem, 8vw, 7rem);
+    --hero-space-top: clamp(7rem, 14vw, 11rem);
+    --hero-space-bottom: clamp(4.5rem, 10vw, 7rem);
+  }
+  html{
+    scroll-behavior:smooth;
+    font-size: clamp(15px, 1.05vw, 18px);
+  }
+  body{
+    background-color: var(--cream);
+    background-image:
+      radial-gradient(circle at 15% 8%, rgba(212,165,165,0.08), transparent 40%),
+      radial-gradient(circle at 85% 92%, rgba(74,127,216,0.06), transparent 40%);
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+  nav > .max-w-6xl{
+    padding-left: var(--page-gutter) !important;
+    padding-right: var(--page-gutter) !important;
+    height: clamp(4rem, 5.5vw, 4.75rem) !important;
+  }
+  header#top{
+    padding-top: var(--hero-space-top) !important;
+    padding-bottom: var(--hero-space-bottom) !important;
+    padding-left: var(--page-gutter) !important;
+    padding-right: var(--page-gutter) !important;
+  }
+  section[id]:not(#top){
+    padding-left: var(--page-gutter) !important;
+    padding-right: var(--page-gutter) !important;
+    padding-top: var(--section-space) !important;
+    padding-bottom: var(--section-space) !important;
+  }
+  .font-body{font-family:'Poppins', sans-serif;}
+  .font-display{font-family:'Cormorant Garamond', serif;}
+  .font-script{font-family:'Great Vibes', cursive;}
+
+  /* Glassmorphism */
+  .glass{
+    background: rgba(26,26,26,0.55);
+    backdrop-filter: blur(18px) saturate(160%);
+    -webkit-backdrop-filter: blur(18px) saturate(160%);
+    border: 1px solid rgba(212,165,165,0.15);
+  }
+  .glass-solid{
+    background: rgba(26,26,26,0.85);
+    backdrop-filter: blur(24px) saturate(160%);
+    -webkit-backdrop-filter: blur(24px) saturate(160%);
+    border: 1px solid rgba(212,165,165,0.12);
+  }
+
+  /* Fade-up reveal */
+  .reveal{
+    opacity:0;
+    transform: translateY(28px);
+    transition: opacity 0.9s cubic-bezier(.22,1,.36,1), transform 0.9s cubic-bezier(.22,1,.36,1);
+  }
+  .reveal.in{
+    opacity:1;
+    transform: translateY(0);
+  }
+  .reveal-stagger > * { transition-delay: calc(var(--i, 0) * 90ms); }
+
+  /* Thread / stitch signature element */
+  .stitch-line{
+    stroke-dasharray: 6 8;
+    stroke: var(--mauve);
+    animation: dash 2.4s linear infinite;
+  }
+  @keyframes dash{ to { stroke-dashoffset: -140; } }
+
+  .thread-draw{
+    stroke-dasharray: 500;
+    stroke-dashoffset: 500;
+    animation: draw 2.2s ease-out 0.4s forwards;
+  }
+  @keyframes draw{ to { stroke-dashoffset: 0; } }
+
+  /* Soft luxury shadow */
+  .shadow-luxe{
+    box-shadow: 0 10px 40px -12px rgba(24,62,122,0.14), 0 2px 8px -2px rgba(170,129,129,0.18);
+  }
+  .shadow-luxe-lg{
+    box-shadow: 0 30px 70px -20px rgba(24,62,122,0.18), 0 6px 18px -4px rgba(170,129,129,0.16);
+  }
+
+  /* Buttons */
+  .btn-primary{
+    background: var(--mauve);
+    color: var(--cream);
+    transition: transform .35s cubic-bezier(.22,1,.36,1), box-shadow .35s, background .35s;
+  }
+  .btn-primary:hover{
+    background: var(--mauve-deep);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px -10px rgba(170,129,129,0.55);
+  }
+  .btn-outline{
+    background: transparent;
+    border: 1.5px solid var(--navy);
+    color: var(--navy);
+    transition: all .35s cubic-bezier(.22,1,.36,1);
+  }
+  .btn-outline:hover{
+    background: var(--navy);
+    color: var(--cream);
+    transform: translateY(-3px);
+    box-shadow: 0 16px 34px -10px rgba(24,62,122,0.4);
+  }
+
+  /* Hover lift for cards */
+  .lift{ transition: transform .5s cubic-bezier(.22,1,.36,1), box-shadow .5s; }
+  .lift:hover{ transform: translateY(-6px); }
+
+  /* Section eyebrow */
+  .eyebrow{
+    letter-spacing: 0.32em;
+    font-size: 0.68rem;
+    color: var(--mauve-deep);
+  }
+
+  /* Divider dot */
+  .dot-divider::before{
+    content:'';
+    display:inline-block;
+    width:5px; height:5px;
+    border-radius:50%;
+    background: var(--mauve);
+    margin: 0 12px;
+    vertical-align: middle;
+  }
+
+  /* Nav underline */
+  .nav-link{ position:relative; }
+  .nav-link::after{
+    content:'';
+    position:absolute; left:0; bottom:-4px;
+    width:0; height:1px;
+    background: var(--mauve);
+    transition: width .35s ease;
+  }
+  .nav-link:hover::after{ width:100%; }
+
+  /* Marquee */
+  .marquee-track{
+    animation: marquee 28s linear infinite;
+  }
+  @keyframes marquee{
+    from{ transform: translateX(0); }
+    to{ transform: translateX(-50%); }
+  }
+
+  /* Glow effects for dark theme */
+  .btn-primary{
+    box-shadow: 0 0 20px rgba(212,165,165,0.0), 0 10px 40px -12px rgba(212,165,165,0.2);
+  }
+  .btn-primary:hover{
+    box-shadow: 0 0 30px rgba(212,165,165,0.4), 0 16px 34px -10px rgba(212,165,165,0.55);
+    animation: glow-pulse 1.5s ease-in-out;
+  }
+  
+  .btn-outline:hover{
+    box-shadow: 0 0 25px rgba(74,127,216,0.3), 0 16px 34px -10px rgba(74,127,216,0.4);
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% { box-shadow: 0 0 20px rgba(212,165,165,0.3), 0 16px 34px -10px rgba(212,165,165,0.55); }
+    50% { box-shadow: 0 0 40px rgba(212,165,165,0.5), 0 16px 34px -10px rgba(212,165,165,0.65); }
+  }
+
+  /* Floating animation */
+  .lift{
+    animation: float-idle 3s ease-in-out infinite;
+  }
+  .lift:hover{
+    animation: none;
+  }
+  @keyframes float-idle {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+  }
+
+  /* Shimmer text animation */
+  .font-script{
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  @keyframes shimmer {
+    0%, 100% { text-shadow: 0 0 10px rgba(212,165,165,0.0); }
+    50% { text-shadow: 0 0 20px rgba(212,165,165,0.4); }
+  }
+
+  /* Heading glow */
+  h1, h2, h3{
+    animation: text-glow 2s ease-in-out infinite;
+  }
+  @keyframes text-glow {
+    0%, 100% { text-shadow: 0 0 10px rgba(212,165,165,0.0); }
+    50% { text-shadow: 0 0 15px rgba(212,165,165,0.15); }
+  }
+
+  /* Link hover glow */
+  a{
+    transition: text-shadow 0.3s ease;
+  }
+  a:hover{
+    text-shadow: 0 0 15px rgba(212,165,165,0.3);
+  }
+
+  /* Card entrance animation */
+  .glass{
+    animation: card-enter 0.8s cubic-bezier(.22,1,.36,1) backwards;
+  }
+  @keyframes card-enter {
+    from {
+      opacity: 0;
+      transform: translateY(20px) scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* Icon rotation on hover */
+  svg{
+    display:block;
+    transition: transform 0.4s cubic-bezier(.22,1,.36,1), filter 0.3s;
+  }
+  .contact-icon svg{
+    width:2.25rem;
+    height:2.25rem;
+    flex:none;
+    overflow:visible;
+    color:var(--mauve-deep);
+  }
+  .contact-icon path{
+    vector-effect: non-scaling-stroke;
+  }
+  a:hover svg{
+    transform: rotate(5deg) scale(1.1);
+    filter: drop-shadow(0 0 8px rgba(212,165,165,0.3));
+  }
+
+  /* Smooth color transitions */
+  body, .btn-primary, .btn-outline, a{
+    transition: color 0.3s ease, background 0.3s ease;
+  }
+
+  ::selection{ background: rgba(212,165,165,0.3); }
+
+  /* Reduced motion respect */
+  @media (prefers-reduced-motion: reduce){
+    *{ animation: none !important; transition: none !important; }
+    .reveal{ opacity:1; transform:none; }
+  }
+
+  :focus-visible{
+    outline: 2px solid var(--navy);
+    outline-offset: 3px;
+  }
+</style>
+</head>
+
+<body class="font-body text-ink antialiased overflow-x-hidden">
+
+<!-- =========================================================
+     NAV
+========================================================= -->
+<nav class="fixed top-0 inset-x-0 z-50 glass-solid">
+  <div class="max-w-6xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="#top" class="font-display text-lg tracking-wide text-ink">
+      Wedding Snapp <span class="text-mauve">×</span> Sociall Snap
+    </a>
+    <div class="hidden md:flex items-center gap-8 text-sm text-ink/80">
+      <a href="#about" class="nav-link">About</a>
+      <a href="#services" class="nav-link">Services</a>
+      <a href="#contact" class="nav-link">Contact</a>
+    </div>
+    <a href="#contact" class="text-xs sm:text-sm px-4 sm:px-5 py-2 rounded-full btn-primary shadow-luxe">Contact Us</a>
+  </div>
+</nav>
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+<header id="top" class="relative pt-32 pb-20 sm:pt-40 sm:pb-28 px-5 sm:px-8">
+  <div class="max-w-5xl mx-auto text-center">
+
+    <!-- Logos + stitch signature -->
+    <div class="reveal in flex items-center justify-center gap-6 sm:gap-12 mb-10">
+      <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-transparent shadow-luxe-lg flex items-center justify-center p-0 border-0">
+        <img src="image/wedding-snapp-logo.jpeg" alt="Wedding Snapp logo" class="w-full h-full object-cover rounded-full" />
+      </div>
+
+      <!-- signature stitch element connecting the two brands -->
+      <svg class="w-10 sm:w-16 h-10 sm:h-16 shrink-0" viewBox="0 0 100 40" fill="none">
+        <path class="thread-draw" d="M2 20 C 25 2, 40 38, 50 20 C 60 2, 75 38, 98 20" stroke="#D4A5A5" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+
+      <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-full shadow-luxe-lg flex items-center justify-center p-0 border-0" style="background:transparent;">
+        <img src="image/sociall-snap-logo.png" alt="Sociall Snap logo" class="w-full h-full object-contain rounded-full" />
+      </div>
+    </div>
+
+    <p class="reveal in eyebrow font-body uppercase mb-4" style="transition-delay:.1s;">Ahmedabad · Gujarat</p>
+
+    <h1 class="reveal in font-display font-medium text-4xl sm:text-6xl md:text-7xl leading-[1.05] text-ink" style="transition-delay:.15s;">
+      Wedding Snapp <span class="text-mauve italic">×</span> Sociall Snap
+    </h1>
+
+    <p class="reveal in mt-5 text-base sm:text-xl text-ink/70 font-light tracking-wide" style="transition-delay:.25s;">
+      Wedding Content Creation &amp; Social Media Management
+    </p>
+
+    <p class="reveal in font-script text-2xl sm:text-3xl text-navy mt-6" style="transition-delay:.35s;">
+      Creating unforgettable wedding memories and building unforgettable brands.
+    </p>
+
+    <div class="reveal in mt-10 flex flex-col sm:flex-row items-center justify-center gap-4" style="transition-delay:.45s;">
+      <a href="#contact" class="w-full sm:w-auto text-center px-9 py-4 rounded-full btn-primary text-sm tracking-wide font-medium shadow-luxe">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+<section id="about" class="px-5 sm:px-8 py-20 sm:py-28">
+  <div class="max-w-4xl mx-auto text-center">
+    <p class="reveal eyebrow uppercase mb-3">Who We Are</p>
+    <h2 class="reveal font-display text-3xl sm:text-5xl font-medium mb-8">One Studio, Two Crafts</h2>
+
+    <p class="reveal text-ink/75 leading-relaxed text-base sm:text-lg mb-6">
+      <span class="font-medium" style="color: #AA8181;">Wedding Snapp</span> is a cinematic wedding content studio built for couples who want their day told honestly and beautifully — not staged. We capture candid moments, behind-the-scenes energy, and deliver professional edited reels that feel polished, emotional, and ready to share.
+    </p>
+
+    <p class="reveal text-ink/75 leading-relaxed text-base sm:text-lg">
+      <span class="text-navy font-medium">Sociall Snap</span> creates social media content and growth strategies for brands and businesses. From reels and graphic design to account management and audience growth, we shape a presence that feels clear, consistent, and built to perform.
+    </p>
+
+    <p class="reveal mt-8 text-ink/60 text-sm sm:text-base italic font-display text-lg">
+      Two teams. One standard of craft.
+    </p>
+  </div>
+</section>
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+<section id="services" class="px-5 sm:px-8 py-20 sm:py-28 bg-creamdeep/60">
+  <div class="max-w-6xl mx-auto">
+    <div class="text-center mb-14">
+      <p class="reveal eyebrow uppercase mb-3">What We Do</p>
+      <h2 class="reveal font-display text-3xl sm:text-5xl font-medium">Our Services</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+
+      <!-- Wedding Snapp card -->
+      <div class="reveal lift glass rounded-3xl p-8 sm:p-10 shadow-luxe">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-full overflow-hidden border-0 shrink-0">
+            <img src="image/wedding-snapp-logo.jpeg" alt="Wedding Snapp" class="w-full h-full object-cover" />
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-medium text-ink">Wedding Snapp</h3>
+            <p class="text-xs text-mauve-deep tracking-widest uppercase">Wedding Content</p>
+          </div>
+        </div>
+
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-mauve shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h7.5a2.25 2.25 0 012.25 2.25v5.25a2.25 2.25 0 01-2.25 2.25H11.5l-3.25 2.25v-2.25h-.5A2.25 2.25 0 015.5 14.25V9a2.25 2.25 0 012.25-2.25Z"/><circle cx="12" cy="11.25" r="1.5"/></svg>
+            Wedding Content Creation
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-mauve shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 20.25s-6.75-3.9-6.75-9.45A4.05 4.05 0 0112 7.2a4.05 4.05 0 016.75 3.6c0 5.55-6.75 9.45-6.75 9.45Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 10.5a2.25 2.25 0 014.5 0"/></svg>
+            Couple Storytelling
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-mauve shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4.5" y="5.25" width="15" height="13.5" rx="2.25"/><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 9.75l5.25 2.25-5.25 2.25v-4.5Z"/><path stroke-linecap="round" d="M7.5 7.5h.01"/></svg>
+            Professional Edited Reels
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-mauve shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="7.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v4.125l2.75 1.625"/><path stroke-linecap="round" d="M12 4.5v1.5"/><path stroke-linecap="round" d="M12 18v1.5"/></svg>
+            Same Day Stories
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-mauve shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 12.75a11.96 11.96 0 004.5-.94l1.5 1.5a11.96 11.96 0 00-.94 4.5m-5.06-5.06a12.078 12.078 0 010-8.94m5.06 5.06L18 6"/></svg>
+            Candid Moments
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-mauve shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75l5.159-5.159m0 0a2.25 2.25 0 013.182 0l5.159 5.159M9 12a3 3 0 116 0"/></svg>
+            Behind the Scenes
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-mauve shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.827 6.175A2.31 2.31 0 015.186 7.23c-.38.054-.757.112-1.134.174C3.069 7.58 2.25 8.518 2.25 9.615v9.129c0 1.294 1.049 2.25 2.25 2.25h15c1.201 0 2.25-.956 2.25-2.25V9.615c0-1.097-.82-2.035-1.802-2.21a49.63 49.63 0 00-1.134-.175 2.31 2.31 0 01-1.64-1.055l-.822-1.316a2.192 2.192 0 00-1.736-1.039 48.774 48.774 0 00-4.212 0c-.674.05-1.295.414-1.737 1.039l-.822 1.316z"/><path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 11-9 0 4.5 4.5 0 019 0zM18.75 10.5h.008v.008h-.008V10.5z"/></svg>
+            iPhone Cinematic Coverage
+          </li>
+        </ul>
+      </div>
+
+      <!-- Sociall Snap card -->
+      <div class="reveal lift glass rounded-3xl p-8 sm:p-10 shadow-luxe" style="transition-delay:.1s;">
+        <div class="flex items-center gap-4 mb-8">
+          <div class="w-14 h-14 rounded-full overflow-hidden shrink-0" style="background:transparent;">
+            <img src="image/sociall-snap-logo.png" alt="Sociall Snap" class="w-full h-full object-contain" />
+          </div>
+          <div>
+            <h3 class="font-display text-2xl font-medium text-ink">Sociall Snap</h3>
+            <p class="text-xs text-navy tracking-widest uppercase">Social Media Growth</p>
+          </div>
+        </div>
+
+        <ul class="space-y-4">
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-navy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 7.5h15M4.5 12h15M4.5 16.5h15"/><circle cx="8" cy="7.5" r="1.5" fill="currentColor" stroke="none"/><circle cx="15" cy="12" r="1.5" fill="currentColor" stroke="none"/><circle cx="10" cy="16.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            Social Media Management
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-navy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4.5" y="5" width="15" height="14" rx="2.25"/><path stroke-linecap="round" stroke-linejoin="round" d="M9 9.5l6 5M15 9.5l-6 5"/></svg>
+            Content Creation
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-navy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4.5" y="5" width="15" height="14" rx="2.5"/><path stroke-linecap="round" stroke-linejoin="round" d="M10 9.25l4.5 2.75L10 14.75V9.25Z"/><circle cx="17" cy="8" r="1" fill="currentColor" stroke="none"/></svg>
+            Instagram Reels
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-navy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 15.75l2.25-2.25 2.25 2.25 3-3"/><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 18.75h13.5A1.5 1.5 0 0020.25 17.25v-10.5A1.5 1.5 0 0018.75 5.25H5.25A1.5 1.5 0 003.75 6.75v10.5A1.5 1.5 0 005.25 18.75Z"/><path stroke-linecap="round" d="M8.25 9.75h.01"/></svg>
+            Graphic Design
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-navy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18"/><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 7.5h9M9 12h6M7.5 16.5h9"/><path stroke-linecap="round" stroke-linejoin="round" d="M6 6l3-3 3 3"/></svg>
+            Brand Strategy
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-navy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 18l5.25-5.25 3 3 6.75-6.75"/><path stroke-linecap="round" stroke-linejoin="round" d="M4.5 18.75h15"/><circle cx="18" cy="7" r="1.25" fill="currentColor" stroke="none"/></svg>
+            Account Growth
+          </li>
+          <li class="flex items-center gap-3 text-ink/80 text-sm sm:text-base">
+            <svg class="w-5 h-5 text-navy shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="4.5" y="5.25" width="15" height="13.5" rx="2.25"/><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 9.75l2.25 2.25 2.25-2.25 3.75 3.75"/><path stroke-linecap="round" d="M7.5 7.5h.01"/><path stroke-linecap="round" d="M10.5 7.5h.01"/></svg>
+            Content Planning
+          </li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+<section id="contact" class="px-5 sm:px-8 py-20 sm:py-28 bg-creamdeep/60">
+  <div class="max-w-5xl mx-auto">
+    <div class="text-center mb-14">
+      <p class="reveal eyebrow uppercase mb-3">Let's Talk</p>
+      <h2 class="reveal font-display text-3xl sm:text-5xl font-medium">Get In Touch</h2>
+    </div>
+
+    <!-- CONTACT CARDS -->
+    <div class="grid sm:grid-cols-3 gap-6 mb-16">
+
+      <!-- <div class="reveal lift glass rounded-3xl p-7 text-center shadow-luxe">
+        <div class="w-16 h-16 mx-auto rounded-full bg-mauve/15 flex items-center justify-center mb-4">
+          <span class="font-display text-2xl text-mauve-deep">T</span>
+        </div>
+        <h3 class="font-display text-xl font-medium mb-1">Tanishi</h3>
+        <p class="text-ink/60 text-sm mb-5">+91 91060 73039</p>
+        <div class="flex gap-2 justify-center">
+          <a href="tel:+919106073039" class="flex-1 px-4 py-2.5 rounded-full btn-primary text-xs font-medium">Call</a>
+          <a href="https://wa.me/919106073039" target="_blank" rel="noopener" class="flex-1 px-4 py-2.5 rounded-full btn-outline text-xs font-medium">WhatsApp</a>
+        </div>
+      </div> -->
+
+      <div class="reveal lift glass rounded-3xl p-7 text-center shadow-luxe" style="transition-delay:.08s;">
+        <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-mauve/15 flex items-center justify-center mb-4">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2.62a2.46 2.46 0 0 1-2.68 2.46A19.38 19.38 0 0 1 2 4.68 2.46 2.46 0 0 1 4.46 2h2.62a1.6 1.6 0 0 1 1.56 1.23l.6 2.6a1.6 1.6 0 0 1-.46 1.54L7.52 8.63a15.3 15.3 0 0 0 7.85 7.85l1.26-1.26a1.6 1.6 0 0 1 1.54-.46l2.6.6A1.6 1.6 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <!-- <h3 class="font-display text-xl font-medium mb-1">Prisha</h3> -->
+        <p class="text-ink/60 text-sm mb-5">+91 93131 38277</p>
+        <div class="flex gap-2 justify-center">
+          <a href="tel:+919313138277" class="flex-1 px-4 py-2.5 rounded-full btn-primary text-xs font-medium">Call</a>
+          <a href="https://wa.me/919313138277" target="_blank" rel="noopener" class="flex-1 px-4 py-2.5 rounded-full btn-outline text-xs font-medium">WhatsApp</a>
+        </div>
+      </div>
+
+      <div class="reveal lift glass rounded-3xl p-7 text-center shadow-luxe" style="transition-delay:.16s;">
+        <div class="contact-icon w-16 h-16 mx-auto rounded-full bg-mauve/15 flex items-center justify-center mb-4">
+          <svg viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M22 16.92v2.62a2.46 2.46 0 0 1-2.68 2.46A19.38 19.38 0 0 1 2 4.68 2.46 2.46 0 0 1 4.46 2h2.62a1.6 1.6 0 0 1 1.56 1.23l.6 2.6a1.6 1.6 0 0 1-.46 1.54L7.52 8.63a15.3 15.3 0 0 0 7.85 7.85l1.26-1.26a1.6 1.6 0 0 1 1.54-.46l2.6.6A1.6 1.6 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <!-- <h3 class="font-display text-xl font-medium mb-1">Aryan</h3> -->
+        <p class="text-ink/60 text-sm mb-5">+91 94261 81394</p>
+        <div class="flex gap-2 justify-center">
+          <a href="tel:+919426181394" class="flex-1 px-4 py-2.5 rounded-full btn-primary text-xs font-medium">Call</a>
+          <a href="https://wa.me/919426181394" target="_blank" rel="noopener" class="flex-1 px-4 py-2.5 rounded-full btn-outline text-xs font-medium">WhatsApp</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- LINKS SECTION: Email / Instagram / Website -->
+    <div class="grid sm:grid-cols-2 gap-6 mb-12">
+
+      <div class="reveal glass rounded-3xl p-8 shadow-luxe">
+        <h4 class="font-display text-lg mb-5 text-mauve-deep">Wedding Snapp</h4>
+        <a href="mailto:weddingsnapp.in@gmail.com" class="flex items-center gap-3 text-sm text-ink/80 hover:text-mauve mb-4 transition">
+          <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          weddingsnapp.in@gmail.com
+        </a>
+        <a href="https://instagram.com/wedding.snapp" target="_blank" rel="noopener" class="flex items-center gap-3 text-sm text-ink/80 hover:text-mauve mb-4 transition">
+          <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg>
+          @wedding.snapp
+        </a>
+        <!-- Website link: update href + text below -->
+        <!-- <a href="https://yourwebsite.com" target="_blank" rel="noopener" class="flex items-center gap-3 text-sm text-ink/80 hover:text-mauve transition">
+          <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 010 18 15 15 0 010-18z"/></svg>
+          weddingsnapp.in
+        </a> -->
+      </div>
+
+      <div class="reveal glass rounded-3xl p-8 shadow-luxe" style="transition-delay:.08s;">
+        <h4 class="font-display text-lg mb-5 text-navy">Sociall Snap</h4>
+        <a href="mailto:sociallsnap@gmail.com" class="flex items-center gap-3 text-sm text-ink/80 hover:text-navy mb-4 transition">
+          <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75"/></svg>
+          sociallsnap@gmail.com
+        </a>
+        <a href="https://instagram.com/sociallsnap" target="_blank" rel="noopener" class="flex items-center gap-3 text-sm text-ink/80 hover:text-navy mb-4 transition">
+          <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="0.6" fill="currentColor" stroke="none"/></svg>
+          @sociallsnap
+        </a>
+        <!-- Website link: update href + text below -->
+        <!-- <a href="https://yourwebsite.com" target="_blank" rel="noopener" class="flex items-center gap-3 text-sm text-ink/80 hover:text-navy transition">
+          <svg class="w-5 h-5 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><path stroke-linecap="round" d="M3.6 9h16.8M3.6 15h16.8M12 3a15 15 0 010 18 15 15 0 010-18z"/></svg>
+          sociallsnap.in
+        </a> -->
+      </div>
+
+    </div>
+
+    <!-- Location -->
+    <div class="reveal glass rounded-3xl p-8 sm:p-10 shadow-luxe text-center mb-10">
+      <p class="eyebrow uppercase mb-3">Find Us</p>
+      <h4 class="font-display text-2xl sm:text-3xl mb-2">Ahmedabad, Gujarat, India</h4>
+      <a href="https://maps.google.com/?q=Ahmedabad,Gujarat,India" target="_blank" rel="noopener" class="inline-flex items-center gap-2 mt-5 px-7 py-3 rounded-full btn-outline text-sm font-medium">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"/></svg>
+        Open in Google Maps
+      </a>
+    </div>
+
+    <!-- Save Contact -->
+    <div class="reveal text-center">
+      <button id="saveContactBtn" class="inline-flex items-center gap-3 px-10 py-5 rounded-full btn-primary text-sm sm:text-base font-medium shadow-luxe-lg">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 6.75l-3-3m3 3l3-3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z"/></svg>
+        Save Contact
+      </button>
+      <p class="text-ink/50 text-xs mt-3">Adds both Wedding Snapp &amp; Sociall Snap to your phone</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer class="px-5 sm:px-8 py-12 text-center border-t border-mauve/15">
+  <p class="font-display text-xl mb-2">Wedding Snapp <span class="text-mauve">×</span> Sociall Snap</p>
+  <p class="text-ink/50 text-xs tracking-wide">Made with ❤️ in Ahmedabad</p>
+</footer>
+
+<!-- =========================================================
+     SCRIPT
+========================================================= -->
+<script>
+  // Scroll reveal
+  const revealEls = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(el => observer.observe(el));
+
+  // VCARD DATA — edit here to update the Save Contact download
+  document.getElementById('saveContactBtn').addEventListener('click', () => {
+    const vcard = [
+      'BEGIN:VCARD',
+      'VERSION:3.0',
+      'N:;Wedding Snapp x Sociall Snap;;;',
+      'FN:Wedding Snapp x Sociall Snap',
+      'ORG:Wedding Snapp / Sociall Snap',
+      'TITLE:Wedding Content Creation & Social Media Management',
+      'TEL;TYPE=CELL,VOICE:+919106073039',
+      'TEL;TYPE=CELL,VOICE:+919313138277',
+      'TEL;TYPE=CELL,VOICE:+919426181394',
+      'EMAIL;TYPE=INTERNET:weddingsnapp.in@gmail.com',
+      'EMAIL;TYPE=INTERNET:sociallsnap@gmail.com',
+      'URL:',
+      'ADR;TYPE=WORK:;;Ahmedabad;Gujarat;;India',
+      'NOTE:Wedding Content Creation & Social Media Management — Ahmedabad, Gujarat, India',
+      'END:VCARD'
+    ].join('\r\n');
+
+    const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'WeddingSnapp-SociallSnap.vcf';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  });
+</script>
+
+</body>
+</html>
