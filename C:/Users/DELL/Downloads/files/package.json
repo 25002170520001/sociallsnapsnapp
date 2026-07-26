@@ -1,0 +1,13 @@
+{
+  "name": "wedding-snapp",
+  "version": "1.0.0",
+  "description": "Wedding Snapp & Sociall Snap - Cinematography & Social Media Management",
+  "main": "index.html",
+  "scripts": {
+    "start": "echo 'Static site - serve index.html'",
+    "build": "echo 'No build needed for static site'"
+  },
+  "keywords": ["wedding", "cinematography", "social-media"],
+  "author": "",
+  "license": "ISC"
+}
